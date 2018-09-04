@@ -1,10 +1,9 @@
-# Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
+# replace spaces in string with %20;
+# string has additional space in the end to hold additional characters 
 
-# You may assume that the array is non-empty and the majority element always exist in the array.
 
-
-def majority_element(nums):
-        set_nums = set(nums)
-        for num in set_nums:
-            if nums.count(num) > len(nums)/2:
-                return num
+def urlify(string):
+    new_string = string.rstrip().lstrip()
+    new_string = new_string.split()
+    new_string = "%20".join(new_string)
+    return new_string
